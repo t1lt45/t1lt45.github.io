@@ -1,0 +1,117 @@
+@media only screen and (max-width: 500px) {
+    .img-profile{
+        margin-top: 50px;
+    }
+    .logo-menu{
+        display: none;
+    }
+    .menu-superior,
+    .edit-ul-menu {
+        flex-direction: column;
+    }
+    .edit-ul-menu {
+        text-align: center;
+        margin: 0;
+        height: 0;
+    }
+    .menu-superior {
+        padding-top: 0;
+        align-items: flex-start;
+    }
+    .btn-menu:focus~ul {
+        height: 180px;
+        margin-top: 20px;
+    }
+    .btn-menu {
+        display: flex;
+    }
+    .edit-ul-menu,
+    .edit-li-menu {
+        width: 100%;
+    }
+
+
+    .sobre-mim-container{
+        margin-bottom: 50px;
+    }
+    .sobre-mim-title {
+        color: #5263CC;
+        /* width: 50%; */
+        max-width: 500px;
+        transition: 0.3s;
+        padding: 10px;
+        cursor: default;
+        margin: 10px;
+        text-align: left;
+    }
+    .sobre-mim-texto {
+        width: 90%;
+        max-width: 390px;
+        transition: 0.3s;
+        padding: 10px;
+        cursor: default;
+        margin: 10px;
+        text-align: left;
+    }
+
+
+    .skills{
+        display: none;
+    }
+    .skill-title{
+        color: #5263CC;
+    }
+    .container-skills{
+        margin-bottom: 50px;
+        max-width: 390px;
+        border: 2px solid white;
+        border-radius: 15px;
+    }
+    .icones-tecnologias {
+        margin: 0;
+        height: 0;
+        height: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 auto;
+        justify-content: center;
+    }
+    .icones-tecnologias img {
+        width: 35px;
+        margin: 10px;
+    }
+    
+
+    .title-vivencia{
+        margin: 0;
+        padding: 10px;
+    }
+    .possuo-vivencia-container{
+        width: 100%;
+        float: right;
+        border: 2px solid white;
+        border-radius: 15px;
+        margin-bottom: 50px;
+    }
+
+    
+    .certificado-edit,
+    .certificado-comportamento {
+        display: none;
+    }
+
+
+    footer{
+        display: flex;
+        position: relative;
+        margin-bottom: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    footer a{
+        margin: 10px;
+        text-align: center;
+    }
+}

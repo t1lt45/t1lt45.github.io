@@ -1,0 +1,122 @@
+@media only screen and (max-width: 800px){
+    body{
+        font-family: 'Poppins', sans-serif;
+        color: #131314;
+        background-color: rgb(37, 37, 37);
+    }
+    
+
+    .logo-menu{
+        display: none;
+    }
+
+
+    .menu-superior,
+    .edit-ul-menu {
+        flex-direction: column;
+    }
+    .edit-ul-menu {
+        text-align: center;
+        margin: 0;
+        height: 0;
+    }
+    .menu-superior {
+        padding-top: 0;
+        align-items: flex-start;
+    }
+    .btn-menu {
+        display: flex;
+    }
+    .edit-ul-menu,
+    .edit-li-menu {
+        width: 100%;
+    }
+
+
+    h1{
+        color: white;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .img-construction{
+        margin: 0;
+        width: 350px;
+        display: flex;
+        justify-content: center;
+        margin-left: 25%;
+    }
+    
+    .contato-linkedin,
+    .contato-email{
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    body{
+        font-family: 'Poppins', sans-serif;
+        color: #131314;
+        background-color: rgb(37, 37, 37);
+    }
+    
+
+    .logo-menu{
+        display: none;
+    }
+
+
+    .menu-superior,
+    .edit-ul-menu {
+        flex-direction: column;
+    }
+    .edit-ul-menu {
+        text-align: center;
+        margin: 0;
+        height: 0;
+    }
+    .menu-superior {
+        padding-top: 0;
+        align-items: flex-start;
+    }
+    .btn-menu {
+        display: flex;
+    }
+    .edit-ul-menu,
+    .edit-li-menu {
+        width: 100%;
+    }
+
+
+    h1{
+        color: white;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .img-construction{
+        margin: 0;
+        width: 350px;
+        display: flex;
+        justify-content: center;
+        margin-left: 2%;
+    }
+    
+
+    .redes-sociais{
+        margin: 0;
+        margin-top: 220px;
+    }
+    .contato-linkedin,
+    .contato-email{
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+    }
+
+    
+}

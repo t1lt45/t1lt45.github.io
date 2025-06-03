@@ -1,0 +1,236 @@
+body{
+    font-family: 'poppins', sans-serif;
+    color: white;
+    background-color: rgb(37, 37, 37);
+}
+ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    padding: 16px;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+
+
+.img-profile{
+    width: 150px;
+    right: 150px;
+    border-radius: 50%;
+}
+.name-edit{
+    margin: 3px;
+    color: #5263CC ;
+}
+.name-profissao{
+    margin: 2px;
+    color: white;
+}
+.profile-center{
+    text-align: center;
+}
+
+
+.menu-superior{
+    background-color: rgb(37, 37, 37);
+    padding: 0 0px;
+    justify-content: space-between;
+    align-items: center;
+}
+.edit-logo-menu{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+.logo-menu{
+    width: 45px;
+    height: 40px;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.edit-ul-menu{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    overflow: hidden;
+    transition: all 0.6s;
+}
+.edit-li-menu{
+    padding: 0 20px;
+    margin: 3%;
+    margin-top: 10px;
+}
+.option-menu{
+    color: white;
+}
+.edit-link-paginas{
+    text-decoration: none;
+}
+.btn-menu{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 36px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: none;
+}
+.btn-menu:focus~ul {
+    height: 360px;
+    margin-top: 20px;
+}
+.edit-li-menu:hover,
+.btn-menu:hover{
+    cursor: pointer;
+    opacity: 0.8;
+    background-color: #5263CC;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+
+.sobre-mim-container{
+    border: 2px solid white;
+    border-radius: 15px;
+    max-width: 750px;
+    margin-top: 35px;
+}
+.sobre-mim-title{
+    color: #5263CC;
+    width: 100%;
+    max-width: 500px;
+    transition: 0.3s;
+    padding: 10px;
+    cursor: default;
+    margin: 10px;
+    text-align: left;
+}
+.sobre-mim-texto{
+    width: 100%;
+    max-width: 720px;
+    transition: 0.3s;
+    padding: 10px;
+    cursor: default;
+    margin: 10px;
+    text-align: left;
+}
+.sobre-mim-bold{
+    color: #5263CC;
+}
+
+.possuo-vivencia-container{
+    width: 100%;
+    max-width: 750px;
+    float: right;
+    border: 2px solid white;
+    border-radius: 15px;
+}
+.title-vivencia{
+    color: #5263CC;
+}
+.title-vivencia,
+.possuo-vivencia{
+    text-align: left;
+    padding: 15px;
+}
+
+.skills{
+    text-align: center;
+    padding-top: 100px;
+    color: #5263CC ;
+}
+.skill-title{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.container-skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.icones-tecnologias{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+    margin: 0;
+}
+.icones-tecnologias img {
+    width: 60px;
+    margin: 20px;
+}
+
+
+
+.certificados{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 70px;
+    margin-top: 350px;
+}
+
+.certificado-edit{
+    color: #5263CC;
+    margin: 0;
+}
+.certificado-comportamento{
+    margin: 0;
+}
+
+
+footer img{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+footer{
+    display: flex;
+    justify-content: center;
+}
+footer a{
+    margin: 20px;
+    text-align: center;
+}
+
+.container{
+    padding: 0px 50px;
+}
+
+
+.certificado-edit{
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slide-container{
+    max-width: 1120px;
+    padding: 40px 0;
+}
+.swiper-pagination{
+    position: static;
+    margin-top: 20px;
+
+}
+.card-image{
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    width: 400px;
+    border-radius: 5%;
+    padding: 3px;
+}
+.card-image .card-img{
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5%;
+    border: 3px solid #000000;
+}

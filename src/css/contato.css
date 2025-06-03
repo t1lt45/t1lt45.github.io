@@ -1,0 +1,90 @@
+
+body{
+    font-family: 'Poppins', sans-serif;
+    color: #131314;
+    background-color: rgb(37, 37, 37);
+}
+
+
+h1{
+    color: white;
+}
+
+
+.menu-superior{
+    background-color: rgb(37, 37, 37);
+    padding: 0 0px;
+    justify-content: space-between;
+    align-items: center;
+}
+.edit-logo-menu{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+.logo-menu{
+    width: 45px;
+    height: 40px;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.edit-ul-menu{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    overflow: hidden;
+    transition: all 0.6s;
+}
+.edit-li-menu{
+    padding: 0 20px;
+    margin: 3%;
+    margin-top: 10px;
+}
+.option-menu{
+    color: white;
+}
+.edit-link-paginas{
+    text-decoration: none;
+}
+.btn-menu{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 36px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: none;
+}
+.btn-menu:focus~ul {
+    height: 360px;
+    margin-top: 20px;
+}
+.edit-li-menu:hover,
+.btn-menu:hover{
+    cursor: pointer;
+    opacity: 0.8;
+    background-color: #5263CC;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+
+.img-construction{
+    margin: 0;
+    padding: 0;
+    width: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 35%;
+}
+
+.contato-linkedin,
+.contato-email{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
