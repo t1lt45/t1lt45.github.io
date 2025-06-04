@@ -1,7 +1,7 @@
 body{
     font-family: 'Courier New', Courier, monospace;
     color: white;
-    background-color: rgb(44, 13, 13);
+    background-color: #0f0f0f;
 }
 ul{
     display: flex;
@@ -44,6 +44,7 @@ a{
 .profile-center{
     text-align: center;
 }
+
 
 
 /* .menu-superior{
@@ -107,7 +108,6 @@ a{
 } */
 
 .menu-superior {
-    background-color: rgb(37, 37, 37);
     padding: 10px 20px;
 }
 
@@ -140,6 +140,7 @@ a{
 
 .option-menu {
     color: #ff0000;
+    font-weight: bold;
     margin: 0;
 }
 
