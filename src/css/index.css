@@ -1,7 +1,7 @@
 body{
-    font-family: 'poppins', sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     color: white;
-    background-color: rgb(37, 37, 37);
+    background-color: rgb(44, 13, 13);
 }
 ul{
     display: flex;
@@ -14,6 +14,18 @@ a{
     color: white;
     text-decoration: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .img-profile{
@@ -34,7 +46,7 @@ a{
 }
 
 
-.menu-superior{
+/* .menu-superior{
     background-color: rgb(37, 37, 37);
     padding: 0 0px;
     justify-content: space-between;
@@ -92,7 +104,104 @@ a{
     background-color: #5263CC;
     border-radius: 8px;
     transition: all 0.3s;
+} */
+
+.menu-superior {
+    background-color: rgb(37, 37, 37);
+    padding: 10px 20px;
 }
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-box {
+    flex-shrink: 0;
+}
+
+.logo-menu {
+    width: 45px;
+    height: 40px;
+}
+
+.edit-ul-menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.edit-li-menu {
+    margin: 0;
+}
+
+.option-menu {
+    color: #ff0000;
+    margin: 0;
+}
+
+.edit-link-paginas {
+    text-decoration: none;
+}
+
+.edit-li-menu:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    background-color: #000000;
+    border-radius: 8px;
+    padding: 5px 10px;
+    transition: all 0.3s;
+}
+
+
+
+
+
+
+
+
+.terminal {
+    background-color: #000000; /* fundo preto */
+    color: #ff0000; /* texto verde */
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 8px;
+    padding: 20px;
+    width: 700px;
+    max-width: 90%;
+    box-shadow: 0 0 15px #fc6969;
+    margin: 20px auto;
+}
+
+.terminal-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.terminal-body {
+    line-height: 1.8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .sobre-mim-container{
