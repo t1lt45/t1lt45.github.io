@@ -1,13 +1,22 @@
 body{
-    font-family: 'poppins', sans-serif;
-    max-width: 1280px;
-    margin: 0 auto;
-    color: #131314;
-    background-color: rgb(37, 37, 37);
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    background-color: #0f0f0f;
+}
+ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    padding: 16px;
+}
+a{
+    color: white;
+    text-decoration: none;
 }
 
 
-.menu-superior{
+/* .menu-superior{
     background-color: rgb(37, 37, 37);
     padding: 0 0px;
     justify-content: space-between;
@@ -65,9 +74,53 @@ body{
     background-color: #5263CC;
     border-radius: 8px;
     transition: all 0.3s;
+} */
+
+.menu-superior {
+    padding: 10px 20px;
 }
 
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.logo-menu {
+    width: 45px;
+    height: 40px;
+}
+
+.edit-ul-menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.edit-li-menu {
+    margin: 0;
+}
+
+.option-menu {
+    color: #ff0000;
+    font-weight: bold;
+    margin: 0;
+}
+
+.edit-link-paginas {
+    text-decoration: none;
+}
+
+/* .edit-li-menu:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    background-color: #000000;
+    border-radius: 8px;
+    padding: 5px 10px;
+    transition: all 0.3s;
+} */
 
 
 .title-projects h1,h2{

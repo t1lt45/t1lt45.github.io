@@ -1,0 +1,183 @@
+/* ========== RESET E ESTILOS GERAIS ========== */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    background-color: #0f0f0f;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/* ========== MENU SUPERIOR ========== */
+.menu-superior {
+    background-color: #1a1a1a;
+    padding: 10px 20px;
+    border-bottom: 1px solid #333;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.edit-ul-menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.edit-li-menu {
+    margin: 0;
+}
+
+.option-menu {
+    color: #ff0000;
+    font-weight: bold;
+    margin: 0;
+}
+
+.edit-link-paginas {
+    text-decoration: none;
+    padding: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.edit-link-paginas:hover {
+    background-color: #333;
+    border-radius: 4px;
+}
+
+/* ========== ESTRUTURA PRINCIPAL (GRID) ========== */
+.container-principal {
+    display: grid;
+    /* Colunas: sidebar (auto), conteúdo principal (1fr), complementar (auto) */
+    grid-template-columns: auto 1fr auto; 
+    grid-template-rows: auto;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto; /* Aumenta o espaçamento do topo/baixo */
+    padding: 0 20px; /* Adiciona padding nas laterais */
+}
+
+.sidebar {
+    /* Estilos para a sidebar (coluna esquerda) */
+    width: 200px; /* Largura fixa para exemplo */
+}
+
+.content {
+    /* Estilos para o container do conteúdo principal (coluna central) */
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    border: 1px solid #333;
+    padding: 25px;
+}
+
+.complementary {
+    /* Estilos para a área complementar (coluna direita) */
+    width: 200px; /* Largura fixa para exemplo */
+}
+
+/* ========== CONTEÚDO INTERNO ========== */
+.about-content h1 {
+    color: #5263CC;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #333;
+}
+
+.about-content h1:not(:first-child) {
+    margin-top: 30px; /* Espaço extra entre as seções */
+}
+
+.about-content p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.about-content ul {
+    list-style-type: none; /* Remove os marcadores padrão */
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.about-content ul li {
+    padding: 5px 0;
+}
+
+.about-content ul li::before {
+    content: '» '; /* Adiciona um marcador personalizado */
+    color: #5263CC;
+    margin-right: 8px;
+}
+
+.about-content ul li a {
+    color: #5cb85c;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.about-content ul li a:hover {
+    color: #6fdc6f;
+}
+
+/* ========== RODAPÉ ========== */
+.rodape {
+    background-color: #1a1a1a;
+    color: #888;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #333;
+    font-size: 0.9em;
+    margin-top: 40px;
+}
+
+.rodape p {
+    margin: 5px 0;
+}
+
+.rodape a {
+    color: #5263CC;
+    text-decoration: none;
+}
+
+.rodape a:hover {
+    text-decoration: underline;
+}
+
+/* ========== RESPONSIVIDADE PARA TELAS MENORES ========== */
+@media (max-width: 900px) {
+    .container-principal {
+        /* Transforma o grid em uma única coluna */
+        grid-template-columns: 1fr; 
+        padding: 0 15px;
+    }
+
+    .sidebar,
+    .complementary {
+        /* Oculta as colunas laterais em telas menores */
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-container {
+        flex-direction: column;
+        align-items: center; /* Centraliza o menu no mobile */
+        gap: 15px;
+    }
+    
+    .content {
+        padding: 20px;
+    }
+}
