@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../src/img/ico/img-ico.ico" type="image/x-icon">
+
+    <title>vBulletin PHP Object Injection | tiltasx64 ~ $</title>
+
+    <link rel="stylesheet" href="../src/css/post.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="header-container">
+            <a href="../../index.html" class="site-title">root@tiltas ~ $</a>
+            <nav class="main-nav">
+                <a href="../research/research.html">~/research</a>
+                <a href="../blog/blog.html">~/blog</a>
+                <a href="../about/about.html">~/about</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content-area">
+        <article class="post-full">
+            <header class="article-header">
+                <h1 class="article-title">RXSS — My First Official Vulnerability</h1>
+                <h1 class="article-subtitle">A Significant Step in My Cybersecurity Journey 🚀</h1>
+
+                <div class="article-meta">
+                    <div class="meta-item">
+                        <strong>published:</strong>
+                        <time datetime="2025-02-03">Feb 3, 2025</time>
+                    </div>
+                    <div class="meta-item">
+                        <strong>reading time:</strong>
+                        <span>5 minutes</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="article-body">
+                <p>
+                    Today, I want to share a milestone in my career in CyberSecurity: I identified my first official vulnerability, a Reflected Cross-Site Scripting (RXSS). 🚀
+                </p>
+
+                <h2 class="sub-heading">What is RXSS?</h2>
+                <p>
+                    ⚪Explaining in a simple and direct way what RXSS is.<br>
+                    — The Reflected Cross-Site Scripting (RXSS) vulnerability happens when a website “reflects” something you type or click on, without verifying that it is safe. This can allow someone malicious to send you a special link. When you click, the site runs hidden code that can, for example, steal your information or do something on the site as if it were you.
+                </p>
+                <p>
+                    ⚪Simple example.<br>
+                    — Imagine you are on a search engine. You type in “pizza” and the site responds with “Results for pizza”. If the site doesn’t verify what you’ve typed, someone could create a malicious link that, instead of searching for “pizza”, sends a code to steal your information. And because the site shows it back without checking, the code ends up being executed in your browser.
+                </p>
+                <p>
+                    ⚪How to avoid this?<br>
+                    — Websites can fix this by checking everything they receive before showing it back. That way, they ensure that they only display safe things.
+                </p>
+
+
+
+                <p>
+                    The vulnerability exists for sure on vBulletin version 4.2.3, so we’ll use this version in the following references. The entry point for this PHP Object Injection, the vulnerable call to the <strong>unserialize()</strong> PHP function, is located within the <strong>/private.php</strong> script:
+                </p>
+
+               
+                <h2 class="sub-heading">What were your initial analysis and what sparked your curiosity/insight to discover the vulnerability? And when the pop-up came, what was the reaction?</h2>
+
+                <p>
+                    — Starting with my initial analysis: I started with the site even though I’m just “curious” (we need to be curious), as I’m currently looking at some content and studies on Web Attack, I started there, what I already had so far, I started to analyze the behavior of the site, going through all the tabs, buttons, forms, searches, until… On one of these screens I started to put payloads in <html> even without forcing the page too much, until I changed it by the payload used (print below).
+                </p>
+
+                                <div class="code-block">
+                    <pre><code><span class="comment">// Used Payload</span>
+&lt;script&gt;alert("TILTASx64")&lt;/script&gt;</code></pre>
+                </div>
+
+                <figure class="article-image">
+                    <img src="../src/img/post/first-rxss/first-rxss.png" alt="screenshot">
+                    <figcaption>“Entrei em choque quando apareceu o pop-up😁” (I was desperate when the pop-up appeared😁) — I’ll leave you with a small piece of evidence: a screenshot with my "TILTASx64" tag, symbolizing this special moment.</figcaption>
+                </figure>
+
+                <p>
+                    - Then… BOOM the pop-up on my screen, I froze at first 😅 I couldn’t believe what I was seeing because it was my first discovery, I tested it again to make sure in another browser (still incredulous) and BOOM, pop-up on the screen again.<br><br>
+                    - Afraid I’d done something wrong, not least because it’s a private project, I went to talk to the person in charge of the project to inform him of the discovery I’d just made.<br><br>
+                    - And that was basically the process from the moment the project was presented to me and I was included in it.<br><br>
+
+                    I will continue to evolve and contribute to meeting the challenges of security in the digital world.<br><br>
+
+                    I hope I’ve contributed in some way.<br>
+                    See you!
+                </p>
+
+                <p>
+                    ⚪<a href="https://medium.com/@tiltasx64/rxss-my-first-official-vulnerability-a-significant-step-in-my-cybersecurity-journey-825035f1595c" target="_blank">More about.</a>
+                </p>
+
+            </section>
+        </article>
+    </main>
+
+    <footer class="rodape">
+        <div class="footer-container">
+            <p>Find me on <a href="https://twitter.com/tiltasx64" target="_blank">X/Twitter</a> / <a href="https://github.com/tiltasx64" target="_blank">Github</a></p>
+            <p>© 2025 tiltasx64. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

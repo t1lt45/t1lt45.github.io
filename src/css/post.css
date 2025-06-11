@@ -127,6 +127,13 @@ a {
     margin: 0 0 20px 0;
 }
 
+.article-subtitle {
+    font-size: 1.8em;
+    color: #888;
+    line-height: 1.2;
+    margin: 0 0 20px 0;
+}
+
 .article-meta {
     background-color: #1e1e1e;
     border: 1px solid #333;
@@ -215,6 +222,39 @@ a {
 .code-block .string { color: #ce9178; }
 .code-block .function { color: #dcdcaa; }
 .code-block .constant { color: #4fc1ff; }
+
+
+
+
+/* ========== [NOVO] ESTILOS PARA IMAGENS NO ARTIGO ========== */
+
+/* O container da imagem (a tag <figure>) */
+.article-image {
+    margin: 2.5em 0; /* Adiciona um bom espaçamento vertical antes e depois da imagem */
+    padding: 0;
+    text-align: center; /* Garante que a imagem e a legenda fiquem centralizadas */
+}
+
+/* A imagem em si (a tag <img>) */
+.article-image img {
+    max-width: 100%;       /* ESSENCIAL: Garante que a imagem nunca ultrapasse a largura do container. Isso resolve a quebra de layout em telas menores. */
+    height: auto;          /* Mantém a proporção da imagem ao redimensionar a largura. */
+    display: block;        /* Remove qualquer espaço extra que o navegador possa adicionar abaixo da imagem. */
+    margin: 0 auto;        /* Centraliza a imagem horizontalmente dentro do <figure>. */
+    border-radius: 8px;    /* Bordas arredondadas para combinar com o design. */
+    border: 1px solid #333;/* Uma borda sutil para integrar a imagem ao tema. */
+}
+
+/* A legenda da imagem (a tag <figcaption>) */
+.article-image figcaption {
+    margin-top: 12px;       /* Espaçamento entre a imagem e a legenda. */
+    font-size: 0.9em;       /* Fonte um pouco menor que o texto do parágrafo. */
+    color: #888;            /* Usa a cor de texto "muted" da nossa paleta. */
+    font-style: italic;     /* Deixa o texto em itálico, um estilo comum para legendas. */
+    line-height: 1.5;
+}
+
+
 
 
 /* ========== RODAPÉ ========== */
