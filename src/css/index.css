@@ -117,6 +117,10 @@ a {
     color: #7aa5ff;
     font-weight: bold;
 }
+.highlight-terminal {
+    color: #52df6a;
+    font-weight: bold;
+}
 
 .skills-section {
     text-align: center;
