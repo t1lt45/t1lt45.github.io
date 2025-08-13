@@ -50,7 +50,7 @@ a {
 }
 
 .main-nav a:hover,
-.main-nav a[href*="blog.html"] { /* Destaca a página ativa */
+.main-nav a[href*="ctf.html"] { /* Destaca a página ativa */
     color: white;
 }
 
