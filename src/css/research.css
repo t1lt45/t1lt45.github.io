@@ -49,9 +49,9 @@ a {
     font-size: 1.1em;
 }
 
-/* REGRA NOVA */
+/* A única diferença: destaca o link 'research' como ativo */
 .main-nav a:hover,
-.main-nav a[href*="research"] { /* Pega "research.html" e "research_pt.html" */
+.main-nav a[href*="research.html"] {
     color: white;
 }
 

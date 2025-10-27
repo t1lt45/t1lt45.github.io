@@ -49,9 +49,8 @@ a {
     font-size: 1.1em;
 }
 
-/* REGRA NOVA */
 .main-nav a:hover,
-.main-nav a[href*="ctf"] { /* Remove ".html" para valer para "ctf.html" e "ctf_pt.html" */
+.main-nav a[href*="ctf.html"] { /* Destaca a página ativa */
     color: white;
 }
 

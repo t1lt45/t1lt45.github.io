@@ -184,33 +184,3 @@ a {
         gap: 15px;
     }
 }
-
-/* ========== SELETOR DE IDIOMA ========== */
-.nav-area {
-    display: flex;
-    align-items: center;
-    gap: 25px; /* Mesmo espaçamento do .main-nav */
-}
-
-.lang-switcher {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    /* Isso separa o 'PT | EN' da navegação principal */
-    padding-left: 25px; 
-    border-left: 1px solid #333;
-}
-
-.lang-switcher a {
-    color: #888; /* Cor 'inativa' */
-    font-weight: bold;
-    font-size: 1em;
-}
-
-.lang-switcher a.lang-active {
-    color: white; /* Cor 'ativa' */
-}
-
-.lang-switcher a:hover {
-    color: white;
-}
