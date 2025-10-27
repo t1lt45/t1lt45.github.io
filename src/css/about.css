@@ -49,9 +49,9 @@ a {
     font-size: 1.1em;
 }
 
-/* Destaca o link 'about' como ativo */
+/* REGRA NOVA (MAIS INTELIGENTE) */
 .main-nav a:hover,
-.main-nav a[href*="about.html"] {
+.main-nav a[href*="about"] { /* Remove ".html" para funcionar em ambas as versões */
     color: white;
 }
 

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../src/img/ico/img-ico.ico" type="image/x-icon">
+
+    <title>Reflected Cross-Site Scripting (RXSS) | tiltasx64 ~ $</title>
+
+    <link rel="stylesheet" href="../src/css/post.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="header-container">
+            <a href="../index_br.html" class="site-title">root@tiltasx64 ~ $</a>
+
+            <div class="nav-area">
+                <nav class="main-nav">
+                    <a href="../src/html/research_br.html">~/research</a>
+                    <a href="../src/html/ctf_br.html">~/ctfg</a> <a href="../src/html/about_br.html">~/about</a>
+                </nav>
+
+                <div class="lang-switcher">
+                    <a href="first-rxss_br.html" class="lang-active">PT</a>
+                    <a href="first-rxss_en.html">EN</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="content-area">
+        <article class="post-full">
+            <header class="article-header">
+                <h1 class="article-title">RXSS — Minha Primeira Vulnerabilidade Oficial</h1>
+                <h1 class="article-subtitle">Um Passo Significativo na Minha Jornada em Cibersegurança 🚀</h1>
+
+                <div class="article-meta">
+                    <div class="meta-item">
+                        <strong>publicado:</strong>
+                        <time datetime="2025-02-03">3 de Fev, 2025</time>
+                    </div>
+                    <div class="meta-item">
+                        <strong>tempo de leitura:</strong>
+                        <span>5 minutos</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="article-body">
+                <p>
+                    Hoje, quero compartilhar um marco na minha carreira em Cibersegurança: identifiquei minha primeira vulnerabilidade oficial, um Reflected Cross-Site Scripting (RXSS). 🚀
+                </p>
+
+                <h2 class="sub-heading">O que é RXSS?</h2>
+                <p>
+                    ⚪Explicando de forma simples e direta o que é RXSS.<br>
+                    — A vulnerabilidade de Reflected Cross-Site Scripting (RXSS) acontece quando um site “reflete” algo que você digita ou clica, sem verificar se aquilo é seguro. Isso pode permitir que alguém mal-intencionado te envie um link especial. Ao clicar, o site executa um código escondido que pode, por exemplo, roubar suas informações ou fazer algo no site como se fosse você.
+                </p>
+                <p>
+                    ⚪Exemplo simples.<br>
+                    — Imagine que você está em um site de busca. Você digita “pizza” e o site responde “Resultados para pizza”. Se o site não verificar o que você digitou, alguém poderia criar um link malicioso que, em vez de buscar “pizza”, envia um código para roubar suas informações. E como o site mostra isso de volta sem checar, o código acaba sendo executado no seu navegador.
+                </p>
+                <p>
+                    ⚪Como evitar isso?<br>
+                    — Sites podem corrigir isso verificando tudo o que recebem antes de mostrar de volta. Assim, eles garantem que apenas coisas seguras sejam exibidas.
+                </p>
+
+                <h2 class="sub-heading">Qual foi sua análise inicial e o que despertou sua curiosidade/insight para descobrir a vulnerabilidade? E quando o pop-up veio, qual foi a reação?</h2>
+
+                <p>
+                    — Começando pela minha análise inicial: Iniciei pelo site mesmo “curioso” (precisamos ser curiosos), como estou vendo atualmente alguns conteúdos e estudos sobre Web Attack, comecei por ali, o que eu já tinha até então, comecei a analisar o comportamento do site, passando por todas as abas, botões, formulários, buscas, até que… Em uma dessas telas comecei a colocar payloads em <html> sem forçar muito a página, até que troquei pelo payload usado (print abaixo).
+                </p>
+
+                <div class="code-block">
+                    <pre><code><span class="comment">// Payload Utilizado</span>
+&lt;script&gt;alert("TILTASx64")&lt;/script&gt;</code></pre>
+                </div>
+
+                <figure class="article-image">
+                    <img src="../src/img/post/first-rxss/first-rxss.png" alt="screenshot do alerta XSS">
+                    <figcaption>“Entrei em choque quando apareceu o pop-up😁” — Vou deixar uma pequena evidência: uma captura de tela com minha tag "TILTASx64", simbolizando esse momento especial.</figcaption>
+                </figure>
+
+                <p>
+                    - Então… BOOM o pop-up na minha tela, de primeira eu gelei 😅 não acreditei no que estava vendo por ser minha primeira descoberta, testei novamente para ter certeza em outro navegador (ainda incrédulo) e BOOM, pop-up na tela novamente.<br><br>
+                    - Com receio de ter feito algo de errado, até por ser um projeto particular, fui falar com o responsável pelo projeto para informar sobre a descoberta que eu tinha acabado de fazer.<br><br>
+                    - E basicamente foi esse o processo desde o momento em que o projeto me foi apresentado e eu fui incluído nele.<br><br>
+
+                    Continuarei evoluindo e contribuindo para enfrentar os desafios da segurança no mundo digital.<br><br>
+
+                    Espero ter contribuído de alguma forma.<br>
+                    Até!
+                </p>
+
+                <p>
+                    ⚪<a href="https://medium.com/@tiltasx64/rxss-my-first-official-vulnerability-a-significant-step-in-my-cybersecurity-journey-825035f1595c" target="_blank">Leia mais sobre (Medium).</a>
+                </p>
+
+            </section>
+        </article>
+    </main>
+
+    <footer class="rodape">
+        <div class="footer-container">
+            <p>Me encontre no <a href="https://twitter.com/tiltasx64" target="_blank">X/Twitter</a> / <a href="https://github.com/tiltasx64" target="_blank">Github</a></p>
+            <p>© 2025 tiltasx64. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
