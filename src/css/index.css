@@ -1,8 +1,24 @@
+/* ========== VARIÁVEIS GLOBAIS (PALETA IR/RED TEAM) ========== */
+:root {
+    --bg-color: #0d1117;          
+    --terminal-bg: #161b22;       
+    --text-primary: #c9d1d9;      
+    --text-dim: #8b949e;             
+    
+    --accent-color: #58a6ff;      /* Azul Info/Link */
+    --user-prompt: #3fb950;       /* Verde Prompt */
+    --file-highlight: #bc8cff;    /* Roxo Arquivos */
+    --danger-color: #ff7b72;
+    --border-color: #30363d;
+    --link-hover: #79c0ff;
+    --cursor-color: #c9d1d9;
+}
+
 /* ========== RESET E ESTILOS GERAIS ========== */
 body {
     font-family: 'Courier New', Courier, monospace;
-    color: #ccc;
-    background-color: #121212;
+    color: var(--text-primary);
+    background-color: var(--bg-color);
     margin: 0;
     padding: 0;
 }
@@ -31,7 +47,7 @@ a {
 .site-title {
     font-size: 1.2em;
     font-weight: bold;
-    color: #ccc;
+    color: var(--text-primary);
 }
 
 .site-title:hover {
@@ -44,13 +60,14 @@ a {
 }
 
 .main-nav a {
-    color: #888;
+    color: var(--text-dim);
     font-weight: bold;
     font-size: 1.1em;
 }
 
 .main-nav a:hover {
     color: white;
+    text-shadow: 0 0 8px var(--accent-color); /* Efeito neon sutil */
 }
 
 /* ========== ÁREA DE CONTEÚDO ========== */
@@ -62,19 +79,15 @@ a {
 
 /* ========== SEÇÃO TERMINAL ========== */
 .terminal {
-    background-color: #1e1e1e;
-    color: #ccc;
+    background-color: var(--terminal-bg);
+    color: var(--text-primary);
     font-family: 'Courier New', Courier, monospace;
     border-radius: 8px;
-    border: 1px solid #333;
+    border: 1px solid var(--border-color);
     padding: 20px;
     margin-bottom: 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
-
-/* .terminal-header {
-    color: #888;
-    margin-bottom: 15px;
-} */
 
 .terminal-body {
     line-height: 1.8;
@@ -84,29 +97,41 @@ a {
     margin: 0;
 }
 
+/* Animação do cursor */
 .cursor {
-    background-color: #ccc;
+    background-color: var(--cursor-color);
     animation: blink 1s step-end infinite;
 }
 
 @keyframes blink {
-    from, to { color: transparent; }
-    50% { color: #ccc; }
+    from, to { opacity: 0; }
+    50% { opacity: 1; }
 }
 
-/* ========== SEÇÕES DE INFORMAÇÃO E SKILLS ========== */
+/* Classes utilitárias para cores dentro do terminal */
+.highlight-user {
+    color: var(--user-prompt);
+    font-weight: bold;
+}
+
+.highlight-file {
+    color: var(--file-highlight);
+    font-weight: bold;
+}
+
+/* Seções Genéricas */
 .section-title {
     font-size: 2em;
     color: white;
     margin-top: 0;
     margin-bottom: 20px;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid var(--border-color);
     padding-bottom: 10px;
 }
 
 .info-box {
-    background-color: #1e1e1e;
-    border: 1px solid #333;
+    background-color: var(--terminal-bg);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 25px;
     line-height: 1.7;
@@ -114,48 +139,17 @@ a {
 }
 
 .highlight {
-    color: #7aa5ff;
+    color: var(--accent-color);
     font-weight: bold;
-}
-.highlight-terminal {
-    color: #52df6a;
-    font-weight: bold;
-}
-
-.skills-section {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.icones-tecnologias {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.icones-tecnologias img {
-    width: 60px;
-    height: 60px;
-    filter: grayscale(100%);
-    opacity: 0.6;
-    transition: all 0.3s ease;
-}
-
-.icones-tecnologias img:hover {
-    filter: grayscale(0%);
-    opacity: 1;
-    transform: translateY(-5px);
 }
 
 /* ========== RODAPÉ ========== */
 .rodape {
-    color: #888;
+    color: var(--text-dim);
     text-align: center;
     padding: 40px 0 20px 0;
     margin-top: 60px;
-    border-top: 1px solid #333;
+    border-top: 1px solid var(--border-color);
 }
 
 .footer-container {
@@ -169,11 +163,11 @@ a {
 }
 
 .rodape a {
-    color: #888;
+    color: var(--text-dim);
 }
 
 .rodape a:hover {
-    color: #ccc;
+    color: var(--text-primary);
     text-decoration: underline;
 }
 
@@ -182,5 +176,10 @@ a {
     .header-container {
         flex-direction: column;
         gap: 15px;
+    }
+    
+    .main-nav {
+        gap: 15px;
+        font-size: 0.9em;
     }
 }

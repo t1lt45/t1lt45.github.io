@@ -1,8 +1,23 @@
+/* ========== VARIÁVEIS GLOBAIS (PALETA IR/RED TEAM) ========== */
+:root {
+    --bg-color: #0d1117;          
+    --terminal-bg: #161b22;       
+    --text-primary: #c9d1d9;      
+    --text-dim: #8b949e;             
+    
+    --accent-color: #58a6ff;      /* Azul Info/Link */
+    --user-prompt: #3fb950;       /* Verde Prompt */
+    --file-highlight: #bc8cff;    
+    --danger-color: #ff7b72;
+    --border-color: #30363d;
+    --link-hover: #79c0ff;
+}
+
 /* ========== RESET E ESTILOS GERAIS ========== */
 body {
     font-family: 'Courier New', Courier, monospace;
-    color: #ccc;
-    background-color: #121212;
+    color: var(--text-primary);
+    background-color: var(--bg-color);
     margin: 0;
     padding: 0;
 }
@@ -31,7 +46,7 @@ a {
 .site-title {
     font-size: 1.2em;
     font-weight: bold;
-    color: #ccc;
+    color: var(--text-primary);
 }
 
 .site-title:hover {
@@ -44,15 +59,16 @@ a {
 }
 
 .main-nav a {
-    color: #888;
+    color: var(--text-dim);
     font-weight: bold;
     font-size: 1.1em;
 }
 
-/* A única diferença: destaca o link 'research' como ativo */
+/* Destaca o link 'wargames' como ativo */
 .main-nav a:hover,
-.main-nav a[href*="research.html"] {
+.main-nav a[href*="wargames"] {
     color: white;
+    text-shadow: 0 0 8px var(--accent-color);
 }
 
 /* ========== ÁREA DE CONTEÚDO E LISTA DE POSTS ========== */
@@ -67,23 +83,31 @@ a {
     color: white;
     margin-top: 0;
     margin-bottom: 30px;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid var(--border-color);
     padding-bottom: 15px;
 }
 
 .posts-list {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 40px; 
 }
 
 .post-item {
-    background-color: #1e1e1e;
+    background-color: var(--terminal-bg);
     padding: 25px;
     border-radius: 8px;
-    border: 1px solid #333;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
+.post-item:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+
+/* ========== CABEÇALHO, TÍTULO E DATA DO POST ========== */
 .post-header {
     display: flex;
     justify-content: space-between;
@@ -99,33 +123,37 @@ a {
 }
 
 .post-title a {
-    color: #7aa5ff;
+    color: var(--accent-color);
+    font-weight: bold;
 }
 
 .post-title a:hover {
     text-decoration: underline;
+    color: var(--link-hover);
 }
 
 .post-date {
-    color: #888;
+    color: var(--text-dim);
     font-size: 0.9em;
     white-space: nowrap;
-    margin-top: 5px;
+    margin-top: 5px; 
 }
 
+/* ========== SNIPPET (resumo) DO POST ========== */
 .post-snippet p {
     margin: 0;
     line-height: 1.7;
-    color: #ccc;
+    color: var(--text-primary);
 }
+
 
 /* ========== RODAPÉ ========== */
 .rodape {
-    color: #888;
+    color: var(--text-dim);
     text-align: center;
     padding: 40px 0 20px 0;
     margin-top: 60px;
-    border-top: 1px solid #333;
+    border-top: 1px solid var(--border-color);
 }
 
 .footer-container {
@@ -139,13 +167,14 @@ a {
 }
 
 .rodape a {
-    color: #888;
+    color: var(--text-dim);
 }
 
 .rodape a:hover {
-    color: #ccc;
+    color: var(--text-primary);
     text-decoration: underline;
 }
+
 
 /* ========== RESPONSIVIDADE ========== */
 @media (max-width: 768px) {
@@ -153,18 +182,27 @@ a {
         flex-direction: column;
         gap: 15px;
     }
+
     .content-area h1 {
         font-size: 2em;
     }
+
     .post-header {
         flex-direction: column;
         gap: 5px;
         align-items: flex-start;
     }
+    
     .post-title {
         font-size: 1.2em;
     }
+
     .post-date {
-        margin-top: 0;
+       margin-top: 0;
+    }
+    
+    .main-nav {
+        gap: 15px;
+        font-size: 0.9em;
     }
 }

@@ -1,8 +1,23 @@
+/* ========== VARIÁVEIS GLOBAIS (PALETA IR/RED TEAM) ========== */
+:root {
+    --bg-color: #0d1117;          
+    --terminal-bg: #161b22;       
+    --text-primary: #c9d1d9;      
+    --text-dim: #8b949e;             
+    
+    --accent-color: #58a6ff;      /* Azul Info/Link */
+    --user-prompt: #3fb950;       /* Verde Prompt */
+    --file-highlight: #bc8cff;    
+    --danger-color: #ff7b72;
+    --border-color: #30363d;
+    --link-hover: #79c0ff;
+}
+
 /* ========== RESET E ESTILOS GERAIS ========== */
 body {
     font-family: 'Courier New', Courier, monospace;
-    color: #ccc;
-    background-color: #121212;
+    color: var(--text-primary);
+    background-color: var(--bg-color);
     margin: 0;
     padding: 0;
 }
@@ -31,7 +46,7 @@ a {
 .site-title {
     font-size: 1.2em;
     font-weight: bold;
-    color: #ccc;
+    color: var(--text-primary);
 }
 
 .site-title:hover {
@@ -44,15 +59,16 @@ a {
 }
 
 .main-nav a {
-    color: #888;
+    color: var(--text-dim);
     font-weight: bold;
     font-size: 1.1em;
 }
 
-/* Destaca o link 'about' como ativo */
+/* Destaca o link 'sobre' como ativo */
 .main-nav a:hover,
-.main-nav a[href*="about.html"] {
+.main-nav a[href*="sobre"] {
     color: white;
+    text-shadow: 0 0 8px var(--accent-color);
 }
 
 /* ========== ÁREA DE CONTEÚDO ========== */
@@ -67,14 +83,14 @@ a {
     color: white;
     margin-top: 0;
     margin-bottom: 30px;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid var(--border-color);
     padding-bottom: 15px;
 }
 
-/* ========== ESTILOS ESPECÍFICOS DA PÁGINA ABOUT ========== */
+/* ========== ESTILOS ESPECÍFICOS DA PÁGINA SOBRE ========== */
 .about-section {
-    background-color: #1e1e1e;
-    border: 1px solid #333;
+    background-color: var(--terminal-bg);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 25px;
     margin-bottom: 30px;
@@ -85,12 +101,12 @@ a {
     color: white;
     margin: 0 0 20px 0;
     padding-bottom: 10px;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .about-section .section-title::before {
     content: '■';
-    color: #7aa5ff;
+    color: var(--accent-color);
     margin-right: 10px;
 }
 
@@ -107,8 +123,8 @@ a {
 
 .custom-list li {
     padding: 8px 0;
-    color: #ccc;
-    border-bottom: 1px solid #282828;
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .custom-list li:last-child {
@@ -117,28 +133,29 @@ a {
 
 .custom-list li::before {
     content: '»';
-    color: #7aa5ff;
+    color: var(--accent-color);
     margin-right: 12px;
     font-weight: bold;
 }
 
 .profile-links li a {
-    color: #7aa5ff;
+    color: var(--accent-color);
     text-decoration: none;
+    font-weight: bold;
 }
 
 .profile-links li a:hover {
     text-decoration: underline;
-    color: #a3c1ff;
+    color: var(--link-hover);
 }
 
 /* ========== RODAPÉ ========== */
 .rodape {
-    color: #888;
+    color: var(--text-dim);
     text-align: center;
     padding: 40px 0 20px 0;
     margin-top: 60px;
-    border-top: 1px solid #333;
+    border-top: 1px solid var(--border-color);
 }
 
 .footer-container {
@@ -152,11 +169,11 @@ a {
 }
 
 .rodape a {
-    color: #888;
+    color: var(--text-dim);
 }
 
 .rodape a:hover {
-    color: #ccc;
+    color: var(--text-primary);
     text-decoration: underline;
 }
 
