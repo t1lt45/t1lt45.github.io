@@ -23,17 +23,20 @@ def generate_blog():
                     title = text.split('\n')[0].replace('# ', '').strip()
                     content_html = markdown.markdown(text, extensions=['fenced_code', 'tables'])
 
-                # Gera o arquivo HTML do post individual
+                # Gera o arquivo HTML do post individual (apontando para o CSS e Favicon)
                 full_post_html = f"""<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../../assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title} | t1lt45_ Lab</title>
+    <link rel="icon" type="image/svg+xml" href="../../assets/img/favicon.svg">
+    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
     <nav style="margin: 20px;"><a href="../../index.html">← Voltar para a Home</a></nav>
     <main><article>{content_html}</article></main>
+    <footer><p>© 2026 t1lt45. Built with focus.</p></footer>
 </body>
 </html>"""
                 
@@ -49,7 +52,7 @@ def generate_blog():
     # 2. ORDENAR PELO MAIS RECENTE
     all_posts.sort(key=lambda x: x['ts'], reverse=True)
 
-    # 3. GERAR A INDEX.HTML OFICIAL (SEM QUEBRAR O LAYOUT)
+    # 3. GERAR A INDEX.HTML OFICIAL
     write_index_official(all_posts)
 
 def write_index_official(posts):
@@ -62,17 +65,19 @@ def write_index_official(posts):
                 <a href="{p['url']}">{p['title']}</a>
             </li>"""
 
-    # O seu template oficial reconstruído
+    # O seu template oficial reconstruído com o Favicon
     official_template = f"""<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>t1lt45 | Reverse Engineering & Malware Lab</title>
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <header>
-        <h1>t1lt45_</h1>
+        <h1>t1lt45</h1>
         <p>Security Researcher | RE & Malware Analysis</p>
         <nav>
             <a href="index.html">Posts</a>
@@ -87,12 +92,16 @@ def write_index_official(posts):
             {post_items_html}
         </ul>
     </main>
+
+    <footer>
+        <p>© 2026 t1lt45. Built with focus.</p>
+    </footer>
 </body>
 </html>"""
 
     with open(INDEX_FILE, 'w', encoding='utf-8') as f:
         f.write(official_template)
-    print(f"✅ Sucesso! {len(posts)} posts indexados no template oficial.")
+    print(f"✅ Sucesso! {len(posts)} posts indexados e Favicon aplicado.")
 
 if __name__ == "__main__":
     generate_blog()

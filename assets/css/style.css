@@ -1,65 +1,103 @@
-/* Minimalist Security Lab Palette */
+/* ============================================================
+   t1lt45_ Security Lab - Universal Style
+   Foco: Legibilidade, Engenharia Reversa e Malware Analysis
+   ============================================================ */
+:root {
+    --bg-color: #f4f4f7;        /* Cinza gelo clarinho */
+    --text-color: #2d2d2d;      /* Cinza escuro para leitura */
+    --accent-purple: #6f42c1;   /* Roxo: Títulos e Identidade */
+    --accent-blue: #0056b3;     /* Azul: Links e Navegação */
+    --accent-red: #d73a49;      /* Vermelho: RE, Malware e Alertas */
+    --code-bg: #ffffff;         /* Fundo branco para blocos de código */
+}
+
 body {
     max-width: 850px;
     margin: 40px auto;
     padding: 0 20px;
     line-height: 1.6;
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: #b7b7c281; /* Cinza clarinho de fundo */
-    color: #2d2d2d;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
+/* --- Cabeçalho e Navegação --- */
 header {
-    border-bottom: 3px solid #6f42c1; /* Linha Roxa */
+    border-bottom: 3px solid var(--accent-purple);
     margin-bottom: 40px;
     padding-bottom: 10px;
 }
 
-h1, h2, h3 {
-    color: #6f42c1; /* Roxo nos títulos */
-}
+h1, h2, h3 { color: var(--accent-purple); }
 
-a {
-    color: #0056b3; /* Azul nos links */
+header h1 { margin: 0; font-size: 2.5em; }
+header p { margin: 5px 0 15px 0; color: #555; }
+
+nav a {
+    color: var(--accent-blue);
     text-decoration: none;
     font-weight: 600;
+    margin-right: 15px;
+    font-size: 1.1em;
 }
 
-a:hover {
+nav a:hover {
     text-decoration: underline;
-    color: #d73a49; /* Vermelho no hover - toque de RE */
+    color: var(--accent-red);
 }
 
-/* Estilo para Blocos de Código (Markdown feel) */
-pre {
-    background: #ffffff; /* Fundo branco para o código contrastar com o fundo cinza */
-    padding: 15px;
-    overflow-x: auto;
-    border-left: 5px solid #d73a49; /* Borda vermelha indicando "perigo/malware" */
-    border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-code {
-    font-family: "Cascadia Code", "Fira Code", monospace;
-    font-size: 0.9em;
-    color: #d73a49; /* Texto de código em vermelho */
-}
-
+/* --- Listagem de Posts (Home) --- */
+.post-list { list-style: none; padding: 0; }
+.post-item { margin-bottom: 25px; }
 .post-date {
     color: #888;
-    font-family: monospace;
+    font-family: 'Cascadia Code', 'Fira Code', monospace;
+    font-size: 0.9em;
 }
 
-/* Garante que o conteúdo do Notion herde as cores do blog */
-article, .notion-page-content {
+/* --- Conteúdo dos Artigos (Markdown/Notion) --- */
+article {
     background-color: transparent !important;
 }
 
-/* Deixa as imagens do Notion responsivas */
+/* Estilo para seções da página Sobre e Títulos de Posts */
+.about-section h3, article h1, article h2 {
+    border-left: 4px solid var(--accent-red);
+    padding-left: 12px;
+    margin-top: 30px;
+}
+
+/* Imagens responsivas com borda sutil */
 img {
     max-width: 100%;
     height: auto;
     border-radius: 4px;
     border: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+/* --- Blocos de Código e Technical Feel --- */
+pre {
+    background: var(--code-bg);
+    padding: 15px;
+    overflow-x: auto;
+    border-left: 5px solid var(--accent-red); /* Borda indicando análise técnica */
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+code {
+    font-family: "Cascadia Code", "Fira Code", "Courier New", monospace;
+    font-size: 0.9em;
+    color: var(--accent-red); /* Código em destaque vermelho */
+}
+
+/* --- Rodapé --- */
+footer {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid #e1e1e1;
+    font-size: 0.85em;
+    color: #777;
+    text-align: center;
 }
