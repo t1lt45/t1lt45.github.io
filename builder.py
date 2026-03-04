@@ -81,20 +81,19 @@ def write_index_official(posts):
         <p>Security Researcher | RE & Malware Analysis</p>
         <nav>
             <a href="index.html">Posts</a>
-            <a href="https://github.com/t1lt45">Github</a>
             <a href="sobre.html">Sobre</a>
         </nav>
     </header>
 
     <main>
-        <h2>Recent Research</h2>
+        <h2>Análises Recentes</h2>
         <ul class="post-list">
             {post_items_html}
         </ul>
     </main>
 
     <footer>
-        <p>© 2026 t1lt45. Built with focus.</p>
+        <p>© 2026 t1lt45. Foco total na análise.</p>
     </footer>
 </body>
 </html>"""
