@@ -6,8 +6,8 @@
     --bg-color: #f4f4f7;        /* Cinza gelo clarinho */
     --text-color: #2d2d2d;      /* Cinza escuro para leitura */
     --accent-purple: #6f42c1;   /* Roxo: Títulos e Identidade */
-    --accent-blue: #0056b3;     /* Azul: Links e Navegação */
-    --accent-red: #d73a49;      /* Vermelho: RE, Malware e Alertas */
+    --accent-blue: #000000;     /* Azul: Links e Navegação */
+    --accent-red: #6f42c1;      /* Vermelho: RE, Malware e Alertas */
     --code-bg: #ffffff;         /* Fundo branco para blocos de código */
 }
 

@@ -29,14 +29,14 @@ def generate_blog():
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{title} | t1lt45_ Lab</title>
+    <title>{title} | t1lt45</title>
     <link rel="icon" type="image/svg+xml" href="../../assets/img/favicon.svg">
     <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
     <nav style="margin: 20px;"><a href="../../index.html">← Voltar para a Home</a></nav>
     <main><article>{content_html}</article></main>
-    <footer><p>© 2026 t1lt45. Built with focus.</p></footer>
+    <footer><p>© 2026 t1lt45.</p></footer>
 </body>
 </html>"""
                 
@@ -62,7 +62,7 @@ def write_index_official(posts):
         post_items_html += f"""
             <li class="post-item">
                 <span class="post-date">{p['date']}</span><br>
-                <a href="{p['url']}">{p['title']}</a>
+                <a>🟪<a href="{p['url']}">{p['title']}</a>
             </li>"""
 
     # O seu template oficial reconstruído com o Favicon
@@ -71,16 +71,16 @@ def write_index_official(posts):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>t1lt45 | Reverse Engineering & Malware Lab</title>
+    <title>t1lt45</title>
     <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <header>
         <h1>t1lt45</h1>
-        <p>Security Researcher | RE & Malware Analysis</p>
+        <p>Security Researcher</p>
         <nav>
-            <a href="index.html">Posts</a>
+            <a href="index.html">Publicações</a>
             <a href="sobre.html">Sobre</a>
         </nav>
     </header>
@@ -93,7 +93,7 @@ def write_index_official(posts):
     </main>
 
     <footer>
-        <p>© 2026 t1lt45. Foco total na análise.</p>
+        <p>© 2026 t1lt45.</p>
     </footer>
 </body>
 </html>"""
